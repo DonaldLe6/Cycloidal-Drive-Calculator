@@ -35,10 +35,11 @@ def main():
   
     st.image('Cycloidal_Diagram.png')
     # Input parameters with sliders
-    D = st.slider("Outer diameter (Path Circle Diameter) (D) (mm)", min_value=10.0, step=1.0, max_value=250.0)
-    dp = st.slider("Diameter of pins (dp) (mm)", min_value=1.0, step=0.1, value=20.0)
-    N = st.slider("Number of pins (N)", min_value=2, step=1, value=150)
-    e = st.slider("Eccentricity (e) (mm)", min_value=0.05, step=0.01, max_value=float((np.floor(((D/N)/2.0)*10)/10)))
+    D = st.slider("Outer diameter (Path Circle Diameter) (D) (mm)", min_value=10.0, value=100.0, step=1.0, max_value=250.0)
+    dp = st.slider("Diameter of pins (dp) (mm)", min_value=1.0, step=0.1,value=4.0, max_value=20.0)
+    N = st.slider("Number of pins (N)", min_value=2, step=1, value=26, max_value=150)
+    e = st.slider("Eccentricity (e) (mm)", min_value=0.05, step=0.01,value=0.5, max_value=float((np.floor(((D/N)/2.0)*10)/10)))
+
 
     Rr = dp / 2
     R = (D) / 2
